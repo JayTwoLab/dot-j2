@@ -1,0 +1,45 @@
+{
+  ".py": {
+    "keywords": ["def", "class", "if", "else", "elif", "import", "from", "return", "try", "except", "with", "as", "for", "while", "in", "is", "not", "and", "or", "yield", "lambda", "None", "True", "False"],
+    "builtins": ["print", "len", "range", "str", "int", "dict", "list", "set", "tuple", "open", "type", "help"],
+    "color_map": { "keywords": "bold magenta", "builtins": "cyan", "string": "yellow", "comment": "dim green" }
+  },
+  ".cpp": {
+    "keywords": ["int", "float", "double", "char", "void", "bool", "if", "else", "for", "while", "do", "return", "switch", "case", "default", "break", "continue", "include", "using", "namespace", "class", "struct", "enum", "public", "private", "protected", "new", "delete", "std", "const", "static", "virtual", "override", "template", "typename", "try", "catch", "throw", "auto", "nullptr"],
+    "color_map": { "keywords": "bold blue", "string": "green", "comment": "dim white" }
+  },
+  ".c": { "copy_from": ".cpp" },
+  ".hpp": { "copy_from": ".cpp" },
+  ".h": { "copy_from": ".cpp" },
+  ".rc": { "copy_from": ".cpp" },
+  ".pro": {
+    "keywords": ["TEMPLATE", "TARGET", "CONFIG", "QT", "SOURCES", "HEADERS", "FORMS", "RESOURCES", "INCLUDEPATH", "LIBS", "DEFINES", "DISTFILES"],
+    "builtins": ["app", "lib", "console", "c++11", "c++14", "c++17", "widgets", "gui", "core", "network"],
+    "color_map": { "keywords": "bold yellow", "builtins": "magenta", "string": "green", "comment": "dim white" }
+  },
+  ".qml": {
+    "keywords": ["import", "property", "signal", "alias", "function", "readonly", "var", "list"],
+    "builtins": ["Item", "Rectangle", "Text", "Image", "Button", "MouseArea", "Column", "Row", "Connections"],
+    "color_map": { "keywords": "bold magenta", "builtins": "bold cyan", "string": "yellow", "comment": "dim green" }
+  },
+  ".xml_style": {
+    "keywords": ["<[^>]+>"],
+    "color_map": { "keywords": "bold blue", "string": "yellow", "comment": "dim green" }
+  },
+  ".qrc": { "copy_from": ".xml_style" },
+  ".vcxproj": { "copy_from": ".xml_style" },
+  ".sln": {
+    "keywords": ["Microsoft", "Visual", "Studio", "Project", "Global", "EndProject", "EndGlobal"],
+    "color_map": { "keywords": "bold cyan", "string": "yellow", "comment": "dim white" }
+  },
+  ".cmake": {
+    "keywords": ["cmake_minimum_required", "project", "set", "option", "find_package", "include_directories", "add_executable", "add_library", "target_link_libraries", "target_include_directories", "if", "else", "endif", "foreach", "endforeach", "while", "endwhile", "message", "list", "configure_file", "install"],
+    "color_map": { "keywords": "bold yellow", "string": "green", "comment": "dim white" }
+  },
+  "CMakeLists.txt": { "copy_from": ".cmake" },
+  "Makefile": {
+    "keywords": ["ifeq", "ifneq", "else", "endif", "include", "export", "override", "define", "endef"],
+    "builtins": ["wildcard", "subst", "patsubst", "shell", "foreach", "abspath", "notdir", "dir"],
+    "color_map": { "keywords": "bold cyan", "builtins": "magenta", "string": "yellow", "comment": "dim white" }
+  }
+}
