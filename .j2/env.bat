@@ -1,6 +1,6 @@
 @echo off
+
 :: current \.j2 directory 
-:: set "J2_ROOT=%CD%\.j2"
 set "J2_ROOT=%CD%"
 
 if not exist "%J2_ROOT%" (

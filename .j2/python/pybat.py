@@ -99,7 +99,7 @@ class PyBat:
             self.console.print(Panel(
                 final_text, 
                 title=f"[bold cyan]{fname}[/bold cyan]", 
-                subtitle=f"[dim]Root: {self.j2_root}[/dim]",
+                # subtitle=f"[dim]Root: {self.j2_root}[/dim]",
                 title_align="left",
                 border_style="blue"
             ))

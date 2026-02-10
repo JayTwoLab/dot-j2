@@ -1,6 +1,6 @@
 #!/bin/bash
+
 # current /.j2 directory
-# export J2_ROOT="$PWD/.j2"
 export J2_ROOT="$PWD"
 
 if [ ! -d "$J2_ROOT" ]; then
