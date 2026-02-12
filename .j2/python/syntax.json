@@ -2,11 +2,11 @@
   ".py": {
     "keywords": ["def", "class", "if", "else", "elif", "import", "from", "return", "try", "except", "with", "as", "for", "while", "in", "is", "not", "and", "or", "yield", "lambda", "None", "True", "False"],
     "builtins": ["print", "len", "range", "str", "int", "dict", "list", "set", "tuple", "open", "type", "help"],
-    "color_map": { "keywords": "bold magenta", "builtins": "cyan", "string": "yellow", "comment": "dim green" }
+    "color_map": { "keywords": "bold bright magenta", "builtins": "bright cyan", "string": "bright yellow", "comment": "dim bright white" }
   },
   ".cpp": {
     "keywords": ["int", "float", "double", "char", "void", "bool", "if", "else", "for", "while", "do", "return", "switch", "case", "default", "break", "continue", "include", "using", "namespace", "class", "struct", "enum", "public", "private", "protected", "new", "delete", "std", "const", "static", "virtual", "override", "template", "typename", "try", "catch", "throw", "auto", "nullptr"],
-    "color_map": { "keywords": "bold blue", "string": "green", "comment": "dim white" }
+    "color_map": { "keywords": "bold bright blue", "string": "bright green", "comment": "dim bright white" }
   },
   ".c": { "copy_from": ".cpp" },
   ".hpp": { "copy_from": ".cpp" },
@@ -15,31 +15,59 @@
   ".pro": {
     "keywords": ["TEMPLATE", "TARGET", "CONFIG", "QT", "SOURCES", "HEADERS", "FORMS", "RESOURCES", "INCLUDEPATH", "LIBS", "DEFINES", "DISTFILES"],
     "builtins": ["app", "lib", "console", "c++11", "c++14", "c++17", "widgets", "gui", "core", "network"],
-    "color_map": { "keywords": "bold yellow", "builtins": "magenta", "string": "green", "comment": "dim white" }
+    "color_map": { "keywords": "bold bright yellow", "builtins": "bright magenta", "string": "bright green", "comment": "dim bright white" }
   },
   ".qml": {
     "keywords": ["import", "property", "signal", "alias", "function", "readonly", "var", "list"],
     "builtins": ["Item", "Rectangle", "Text", "Image", "Button", "MouseArea", "Column", "Row", "Connections"],
-    "color_map": { "keywords": "bold magenta", "builtins": "bold cyan", "string": "yellow", "comment": "dim green" }
+    "color_map": { "keywords": "bold bright magenta", "builtins": "bold bright cyan", "string": "bright yellow", "comment": "dim bright green" }
+  },
+  ".bat": {
+    "keywords": ["@echo", "off", "set", "if", "else", "exist", "errorlevel", "goto", "call", "exit", "pause", "rem", "for", "in", "do", "shift", "pushd", "popd"],
+    "builtins": ["defined", "not", "nul", "con"],
+    "color_map": { "keywords": "bold bright magenta", "builtins": "bright cyan", "string": "bright yellow", "comment": "dim bright white" }
+  },
+  ".cmd": { "copy_from": ".bat" },
+
+  ".sh": {
+      "keywords": ["if", "then", "else", "elif", "fi", "for", "while", "in", "do", "done", "case", "esac", "function", "return", "local", "export", "alias", "source", "echo", "printf"],
+      "builtins": ["cd", "pwd", "exit", "break", "continue", "shift", "read", "eval", "exec", "test", "type"],
+      "color_map": {
+        "keywords": "bold bright magenta",
+        "builtins": "bright cyan",
+        "string": "bright green",
+        "comment": "dim bright white"
+      }
+    },
+
+  ".zsh": { "copy_from": ".sh" },
+  ".csh": {
+    "keywords": ["if", "then", "else", "endif", "foreach", "end", "while", "switch", "case", "breaksw", "default", "set", "setenv", "alias", "source"],
+    "color_map": { "copy_from": ".sh" }
+  },
+  ".fish": {
+    "keywords": ["if", "else", "end", "for", "while", "switch", "case", "function", "return", "set", "alias", "command"],
+    "builtins": ["echo", "printf", "cd", "pwd", "exit", "string", "contains"],
+    "color_map": { "keywords": "bold bright magenta", "builtins": "bright cyan", "string": "bright yellow", "comment": "dim bright white" }
   },
   ".xml_style": {
     "keywords": ["<[^>]+>"],
-    "color_map": { "keywords": "bold blue", "string": "yellow", "comment": "dim green" }
+    "color_map": { "keywords": "bold bright blue", "string": "bright yellow", "comment": "dim bright green" }
   },
   ".qrc": { "copy_from": ".xml_style" },
   ".vcxproj": { "copy_from": ".xml_style" },
   ".sln": {
     "keywords": ["Microsoft", "Visual", "Studio", "Project", "Global", "EndProject", "EndGlobal"],
-    "color_map": { "keywords": "bold cyan", "string": "yellow", "comment": "dim white" }
+    "color_map": { "keywords": "bold bright cyan", "string": "bright yellow", "comment": "dim bright white" }
   },
   ".cmake": {
-    "keywords": ["cmake_minimum_required", "project", "set", "option", "find_package", "include_directories", "add_executable", "add_library", "target_link_libraries", "target_include_directories", "if", "else", "endif", "foreach", "endforeach", "while", "endwhile", "message", "list", "configure_file", "install"],
-    "color_map": { "keywords": "bold yellow", "string": "green", "comment": "dim white" }
+    "keywords": ["cmake_minimum_required", "project", "set", "option", "find_package", "add_executable", "add_library", "target_link_libraries", "if", "endif"],
+    "color_map": { "keywords": "bold bright yellow", "string": "bright green", "comment": "dim bright white" }
   },
   "CMakeLists.txt": { "copy_from": ".cmake" },
   "Makefile": {
-    "keywords": ["ifeq", "ifneq", "else", "endif", "include", "export", "override", "define", "endef"],
-    "builtins": ["wildcard", "subst", "patsubst", "shell", "foreach", "abspath", "notdir", "dir"],
-    "color_map": { "keywords": "bold cyan", "builtins": "magenta", "string": "yellow", "comment": "dim white" }
+    "keywords": ["ifeq", "ifneq", "else", "endif", "include", "export"],
+    "builtins": ["wildcard", "patsubst", "shell", "foreach"],
+    "color_map": { "keywords": "bold bright cyan", "builtins": "bright magenta", "string": "bright yellow", "comment": "dim bright white" }
   }
 }
