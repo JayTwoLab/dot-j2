@@ -1,5 +1,7 @@
 #!/bin/zsh
-# Set current /.j2 directory
+
+export TERM=xterm-256color
+
 export J2_ROOT="$PWD"
 
 if [[ ! -d "$J2_ROOT" ]]; then

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export TERM=xterm-256color
+
 # current /.j2 directory
 export J2_ROOT="$PWD"
 

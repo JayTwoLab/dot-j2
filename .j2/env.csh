@@ -1,7 +1,7 @@
-# Csh environment setup
-# Add your environment variables and settings here
-# env.csh - Csh version
-# Set current /.j2 directory
+#!/bin/csh -f
+
+setenv TERM xterm-256color
+
 setenv J2_ROOT $PWD
 
 if (! -d $J2_ROOT) then
@@ -13,3 +13,5 @@ setenv LD_LIBRARY_PATH "$J2_ROOT/lib:$LD_LIBRARY_PATH"
 
 echo "J2 Environment Activated."
 echo "J2_ROOT is set to: $J2_ROOT"
+
+

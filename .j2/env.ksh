@@ -1,7 +1,7 @@
-# Ksh environment setup
-# Add your environment variables and settings here
-# env.ksh - Ksh version
-# Set current /.j2 directory
+#!/usr/bin/env ksh
+
+export TERM=xterm-256color
+
 export J2_ROOT="$PWD"
 
 if [[ ! -d "$J2_ROOT" ]]; then
@@ -13,3 +13,4 @@ export LD_LIBRARY_PATH="$J2_ROOT/lib:$LD_LIBRARY_PATH"
 
 echo "J2 Environment Activated."
 echo "J2_ROOT is set to: $J2_ROOT"
+
