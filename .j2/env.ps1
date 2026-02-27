@@ -9,5 +9,10 @@ if (-not (Test-Path $J2_ROOT)) {
 
 $env:PATH = "$J2_ROOT/bin;$J2_ROOT/lib;$env:PATH"
 
+# Add platform-specific paths
+if (Test-Path "$J2_ROOT/bin/win") {
+	$env:PATH = "$J2_ROOT/bin/win;$env:PATH"
+}
+
 Write-Host "J2 Environment Activated."
 Write-Host "J2_ROOT is set to: $J2_ROOT"
