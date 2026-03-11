@@ -1,0 +1,17 @@
+[
+    {
+        "group": "WEB_BROWSER",
+        "name": "chrome.exe",
+        "arg": null
+    },
+    {
+        "group": "WEB_BROWSER",
+        "name": "msedge.exe",
+        "arg": null
+    },    
+    {
+        "group": "DATABASE",
+        "name": "mysqld",
+        "arg": "--port=3306"
+    }
+]
